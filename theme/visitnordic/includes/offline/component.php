@@ -1,4 +1,4 @@
-<?php $app = Factory::getApplication(); ?>
+<?php $app = JFactory::getApplication(); ?>
 
 <div class="offline well">
 	<?php if ($app->get('offline_image')) : ?>

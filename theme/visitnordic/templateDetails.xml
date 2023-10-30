@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="template" version="4.0" method="upgrade">
-  <name>Visit Nordic</name>
-  <creationDate>2023-10-30</creationDate>
-  <author>LokalNyt</author>
-  <authorEmail>info@lokalnyt.com</authorEmail>
-  <authorUrl>http://www.lokalnyt.com</authorUrl>
-  <copyright>Copyright (C) 2023 LokalNyt. All rights reserved.</copyright>
-  <license>GNU General Public License</license>
-  <version>4.0.0</version>
-  <description>Visit Nordic Joomla 4 Template</description>
-  
+<extension version="3.3" type="template" method="upgrade">
+	<name>Visitnordic</name>
+	<creationDate>01/11-2015</creationDate>
+	<version>Stable 1.2.1</version>
+	<description></description>
 	<files>
 		<folder>assets</folder>
 		<folder>dist</folder>

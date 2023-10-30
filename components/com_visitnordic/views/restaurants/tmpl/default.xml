@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<metadata>
-    <layout title="COM_VISITNORDIC_TITLE_LIST_VIEW_RESTAURANTS" option="View">
-        <message>
-            <![CDATA[COM_VISITNORDIC_TITLE_LIST_VIEW_RESTAURANTS_DESC]]>
-        </message>
-    </layout>
-</metadata>

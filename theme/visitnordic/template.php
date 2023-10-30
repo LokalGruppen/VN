@@ -91,19 +91,19 @@ if (!$logo_link) {
                 </button>
                 -->
                 <div class="collapse navbar-collapse mt-sm-2" id="navbar-toggle">
-                <?php if ($this->countModules('navigation')) : ?>
-                    <jdoc:include type="modules" name="navigation" style="none" />
-                <?php endif; ?>
+                    <?php if ($helper->countModules('navigation')) : ?>
+                        <?php $helper->renderModules('navigation', 'none', true); ?>
+                    <?php endif; ?>
                 </div>
 			</div>
         </nav>
         <?php
-                if (Factory::getApplication()->input->get('view') === "home") {
-                    if ($this->countModules('fullwidth-outside')) : ?>
-                        <jdoc:include type="modules" name="fullwidth-outside" style="block" />
-                    <?php endif;
-                } else {}
-            ?>
+if(JRequest::getVar('view') == "home" ) {
+if ($helper->countModules('fullwidth-outside')) : ?>
+    <?php $helper->renderModules('fullwidth-outside', 'block'); ?>
+    <?php endif;
+}else{}?>
+           
         <div class="container-fluid">
             
             <?php if ($helper->countModules('fullwidth')) : ?>
