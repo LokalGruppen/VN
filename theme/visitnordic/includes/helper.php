@@ -1,4 +1,5 @@
 <?php
+
 use Joomla\CMS\Helper\ModuleHelper;
 
 defined('_JEXEC') or die;
