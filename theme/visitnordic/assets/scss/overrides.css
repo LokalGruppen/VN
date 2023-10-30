@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    background-color: #fff !important;
+    padding-top: 85px !important;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Raleway, -apple-system, system-ui, BlinkMacSystemFont, serif;
+    font-weight: 600;
+    color: #114b5f !important;
+    letter-spacing: 2px;
+}
+
+p,
+.character-count,
+.tlid-character-count {
+    font-size: 1.2rem;
+    max-width: 85ch;
+    color: #114b5f !important;
+    font-weight: 400;
+}
+
+p.text-muted {
+    font-size: 0.888rem !important;
+    color: #114b5f !important;
+}
+
+
+table tr td {
+    font-size: 0.875rem !important;
+}
+
+/* NAVIGATION */
+@media (min-width: 1024px) {
+    .navbar-expand-lg .navbar-nav {
+        margin-left: 25px;
+    }
+
+    .navbar-nav li {
+        margin-left: 25px;
+    }
+}
+
+/* .navbar-dark .navbar-nav .nav-link {
+    color: #fff!important;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color:#fff;
+}
+
+.navbar-toggler-icon{
+    color:#fff!important;
+}
+.dropdown .dropdown-menu{
+    color:#114b5f!important;
+}
+
+li.dropdown-item a, .dropdown-item, .dropdown-item a{
+    color:#114b5f!important;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color:#114b5f!important;
+}
+.navbar-nav li{
+    color:#fff!important;
+} */
+/* SLIDESHOW */
+.carousel {
+    height: 640px !important;
+}
+
+.slick-list .draggable {
+    height: 640px !important;
+}
+
+.carousel-item {
+    height: 640px !important;
+}
+
+.carousel-item p {
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+p.credits {
+    color: #114b5f !important;
+    font-weight: 600;
+    font-size: .7rem;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    background-color: rgba(110, 110, 110, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mod_googleSearch_cse input {
+    border: 0 !important;
+    margin-left: -10% !important;
+}
+
+.footer .row {
+    justify-content: space-between;
+}
+
+.footer .nav-header {
+    font-weight: 500;
+}
+
+@media(min-width:576px) {
+    .col-sm-3 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+}
+
+@media(min-width:576px) {
+    .col-sm-9 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%
+    }
+}
+
+.h1,
+h1 {
+    font-size: 2rem !important;
+}
+
+.h2,
+h2 {
+    font-size: 1.5rem !important;
+}
+
+.h3,
+h3 {
+    font-size: 1.25rem !important;
+}
+
+.h4,
+h4 {
+    font-size: 1rem !important;
+}
+
+@media (max-width: 1200px) {
+
+    .h1,
+    h1 {
+        font-size: 1.375rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .h3,
+    h3 {
+        font-size: 1.125rem;
+    }
+
+    .h4,
+    h4 {
+        font-size: 1.125rem;
+    }
+
+    .h5,
+    h5,
+    .h6,
+    h6 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+
+    img {
+        width: 100% !important;
+    }
+
+    .carousel {
+        height: 400px !important;
+    }
+
+    .slick-list .draggable {
+        height: 400px !important;
+    }
+
+    .carousel-item {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .display-4 {
+        margin-top: 0px !important;
+    }
+
+    .visitnordic_billede {
+        min-height: auto !important;
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1600px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1600px !important;
+    }
+
+    .visitnordic_billede {
+        min-height: 640px !important;
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .visitnordic_billede {
+        min-height: 640px !important;
+        width: 100% !important;
+    }
+}
+
+/*
+.card-body {
+    flex: 1 1 auto;
+    padding: 3rem;
+}
+.card-img-overlay {
+    background-color: hsla(0,0%,100%,.8);
+    overflow: hidden;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 3rem;
+}
+.card-img-overlay .card-title, .card-title .align-self-start{
+text-align:center!important;
+align-self: center!important;
+}
+.card-img-overlay .card-text, .card-text .align-self-between{
+text-align:center!important;
+align-self: center!important;   
+}
+.card-img-overlay-footer {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9)!important;
+    color: #fff!important;
+    padding: 10px;
+}
+.card-img-overlay-footer .card-title {
+    margin: 0;
+    text-align:center;
+}
+.card-img-overlay-footer .card-title a{
+    color:#444;
+    padding-bottom:1rem;
+}
+
+
+.p-4 {
+    padding: 3rem!important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 3rem!important;
+}
+
+div.col-12.hotel{
+    height:200px!important;
+}
+
+div.col-12.hotel img{
+    height:200px!important;
+    width:auto!important;
+}
+
+*/
+@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 20% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .switcher a img {
+        width: 25px !important;
+    }
+}
+
+/* Attractions */
+#introduction .col-md-12 {
+    padding: 15px !important;
+}

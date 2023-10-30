@@ -1,0 +1,12 @@
+import 'flag-icon-css/sass/_flag-icon.scss';
+import 'slick-carousel/slick/slick.scss';
+import 'slick-carousel/slick/slick-theme.scss';
+import '../scss/template.scss';
+import $ from "jquery";
+window.$ = $;
+window.jQuery = $;
+import 'bootstrap';
+require('script-loader!slick-carousel');
+require('luminous-lightbox');
+require('cookieconsent');
+import './template';

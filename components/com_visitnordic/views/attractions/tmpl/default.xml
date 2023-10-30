@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_VISITNORDIC_TITLE_LIST_VIEW_ATTRACTIONS" option="View">
+        <message>
+            <![CDATA[COM_VISITNORDIC_TITLE_LIST_VIEW_ATTRACTIONS_DESC]]>
+        </message>
+    </layout>
+</metadata>
