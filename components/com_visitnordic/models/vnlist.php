@@ -67,7 +67,7 @@ class VNModelList extends JModelList
     public function getItems()
     {
         $items = parent::getItems();
-        $db = JFactory::getDbo();
+        $db = Factory::getDbo();
 
         foreach ($items as $item) {
             if (isset($item->category)) {
@@ -125,8 +125,8 @@ class VNModelList extends JModelList
 
     protected function populateState($ordering = 'ordering', $direction = 'ASC')
     {
-        $app = JFactory::getApplication();
-        $user = JFactory::getUser();
+        $app = Factory::getApplication();
+        $user = Factory::getUser();
 
         // Filter on state for those who do not have edit or edit.state rights
         if ((!$user->authorise('core.edit.state', 'com_visitnordic')) && (!$user->authorise('core.edit', 'com_visitnordic'))) {
@@ -135,7 +135,7 @@ class VNModelList extends JModelList
 
         // Filter on language if Multi language site
         if (JLanguageMultilang::isEnabled()) {
-            $this->setState('filter.language', JFactory::getLanguage()->getTag());
+            $this->setState('filter.language', Factory::getLanguage()->getTag());
         }
 
         // Set layout
@@ -247,7 +247,7 @@ class VNModelList extends JModelList
 
     protected function loadFormData()
     {
-        $app = JFactory::getApplication();
+        $app = Factory::getApplication();
         $filters = $app->getUserState($this->context . '.filter', array());
         $error_dateformat = false;
 

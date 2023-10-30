@@ -1,4 +1,4 @@
-<?php $app = JFactory::getApplication(); ?>
+<?php $app = Factory::getApplication(); ?>
 
 <div class="error well">
 

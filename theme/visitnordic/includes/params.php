@@ -9,13 +9,13 @@ defined('_JEXEC') or die;
 include_once __DIR__ .'/helper.php';
 
 // Init usefull ressources
-$app	    = JFactory::getApplication();
-$doc	    = JFactory::getDocument();
-$user       = JFactory::getUser();
-$config     = JFactory::getConfig();
+$app	    = Factory::getApplication();
+$doc	    = Factory::getDocument();
+$user       = Factory::getUser();
+$config     = Factory::getConfig();
 
 // Getting params from template
-$params	= JFactory::getApplication()->getTemplate(true)->params;
+$params	= Factory::getApplication()->getTemplate(true)->params;
 
 // Build up direct path to template
 $tpath	= $this->baseurl . '/templates/' . $this->template;

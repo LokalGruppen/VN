@@ -14,5 +14,5 @@ jimport('joomla.application.component.controller');
 
 // Execute the task.
 $controller = JControllerLegacy::getInstance('Visitnordic');
-$controller->execute(JFactory::getApplication()->input->get('task'));
+$controller->execute(Factory::getApplication()->input->get('task'));
 $controller->redirect();

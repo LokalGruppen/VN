@@ -38,7 +38,7 @@ if ($params->get('dropdown', 1) && !$params->get('dropdownimage', 0))
             </a>
             <?php endif; ?>
             <?php endforeach; ?>
-            <div class="dropdown-menu" dir="<?php echo JFactory::getLanguage()->isRtl() ? 'rtl' : 'ltr'; ?>">
+            <div class="dropdown-menu" dir="<?php echo Factory::getLanguage()->isRtl() ? 'rtl' : 'ltr'; ?>">
                 <?php foreach ($list as $language) : ?>
                     <?php if ($params->get('show_active', 0) || !$language->active) : ?>
                         <a class="dropdown-item<?php echo $language->active ? ' active' : ''; ?>" href="<?php echo $language->link; ?>">

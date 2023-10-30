@@ -2,7 +2,7 @@
 
 $position = $displayData;
 
-$document = JFactory::getDocument();
+$document = Factory::getDocument();
 $renderer = $document->loadRenderer('module');
 
 $modules = JModuleHelper::getModules($position);

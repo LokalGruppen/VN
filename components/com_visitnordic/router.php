@@ -112,7 +112,7 @@ class VisitnordicRouter extends JComponentRouterBase
 
     function getMenuItem($view = null, $id = null)
     {
-        $db = JFactory::getDBO();
+        $db = Factory::getDBO();
         $url = 'index.php?option=com_visitnordic';
 
         if ($view) {
@@ -133,7 +133,7 @@ class VisitnordicRouter extends JComponentRouterBase
 
         // Filter on language if Multi language site
         if (JLanguageMultilang::isEnabled()) {
-            $query->where($db->quoteName('language') . ' = ' . $db->quote(JFactory::getLanguage()->getTag()));
+            $query->where($db->quoteName('language') . ' = ' . $db->quote(Factory::getLanguage()->getTag()));
         }
 
         $db->setQuery($query);
@@ -156,7 +156,7 @@ class VisitnordicRouter extends JComponentRouterBase
             return $id;
         }
 
-        $db = JFactory::getDBO();
+        $db = Factory::getDBO();
         $table = VisitnordicHelper::getDataTable($view);
 
         $query = $db->getQuery(true)
@@ -237,7 +237,7 @@ class VisitnordicRouter extends JComponentRouterBase
             return $alias;
         }
 
-        $db = JFactory::getDBO();
+        $db = Factory::getDBO();
         $table = VisitnordicHelper::getDataTable($view);
 
         $query = $db->getQuery(true)
@@ -245,8 +245,8 @@ class VisitnordicRouter extends JComponentRouterBase
             ->from($db->quoteName($table))
             ->where($db->quoteName('alias') . ' = ' . $db->quote($alias));
 
-        if (JFactory::getApplication()->getLanguageFilter()) {
-            $query->where($db->quoteName('language') . ' = ' . $db->quote(JFactory::getLanguage()->getTag()));
+        if (Factory::getApplication()->getLanguageFilter()) {
+            $query->where($db->quoteName('language') . ' = ' . $db->quote(Factory::getLanguage()->getTag()));
         }
 
         $db->setQuery($query);

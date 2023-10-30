@@ -1,4 +1,4 @@
-    <?php $tpath = JUri::base(true) .'/templates/'. JFactory::getApplication()->getTemplate(); ?>
+    <?php $tpath = JUri::base(true) .'/templates/'. Factory::getApplication()->getTemplate(); ?>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="x-ua-compatible" content="IE=edge,chrome=1" />

@@ -22,7 +22,7 @@ class VisitnordicViewArticles extends JViewLegacy
 
     public function display($tpl = null)
     {
-        $app = JFactory::getApplication();
+        $app = Factory::getApplication();
 
         $this->state = $this->get('State');
         $this->items = $this->get('Items');
@@ -40,7 +40,7 @@ class VisitnordicViewArticles extends JViewLegacy
 
     protected function _prepareDocument()
     {
-        $app = JFactory::getApplication();
+        $app = Factory::getApplication();
         $menus = $app->getMenu();
         $menu = $menus->getActive();
         $title = $this->params->get('page_title', '');

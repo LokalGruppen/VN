@@ -20,7 +20,7 @@ class VNModelItem extends JModelItem
 {
     public function getData($id = null)
     {
-        $db = JFactory::getDbo();
+        $db = Factory::getDbo();
 
         if ($this->_item === null) {
             $this->_item = false;
@@ -49,7 +49,7 @@ class VNModelItem extends JModelItem
                 return $this->_item;
             }
 
-            if (strtotime($table->publish_up) > strtotime(JFactory::getDate()) || ((strtotime($table->publish_down) < strtotime(JFactory::getDate())) && $table->publish_down != JFactory::getDbo()->getNullDate())) {
+            if (strtotime($table->publish_up) > strtotime(Factory::getDate()) || ((strtotime($table->publish_down) < strtotime(Factory::getDate())) && $table->publish_down != Factory::getDbo()->getNullDate())) {
                 return $this->_item;
             }
 
@@ -128,7 +128,7 @@ class VNModelItem extends JModelItem
 
     public function getCategoryName($id)
     {
-        $db = JFactory::getDbo();
+        $db = Factory::getDbo();
         $query = $db->getQuery(true)
             ->select('title')
             ->from('#__categories')
@@ -139,14 +139,14 @@ class VNModelItem extends JModelItem
 
     protected function populateState()
     {
-        $app = JFactory::getApplication('com_visitnordic');
+        $app = Factory::getApplication('com_visitnordic');
 
         // Load state from the request userState on edit or from the passed variable on default
-        if (JFactory::getApplication()->input->get('layout') == 'edit') {
-            $id = JFactory::getApplication()->getUserState('com_visitnordic.edit.' . $this->modeltype . '.id');
+        if (Factory::getApplication()->input->get('layout') == 'edit') {
+            $id = Factory::getApplication()->getUserState('com_visitnordic.edit.' . $this->modeltype . '.id');
         } else {
-            $id = JFactory::getApplication()->input->get('id');
-            JFactory::getApplication()->setUserState('com_visitnordic.edit.' . $this->modeltype . '.id', $id);
+            $id = Factory::getApplication()->input->get('id');
+            Factory::getApplication()->setUserState('com_visitnordic.edit.' . $this->modeltype . '.id', $id);
         }
         $this->setState($this->modeltype . '.id', $id);
 

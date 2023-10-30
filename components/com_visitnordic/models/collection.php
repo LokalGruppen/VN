@@ -22,7 +22,7 @@ class VisitnordicModelCollection extends VNModelItem
 
     public function getData($id = null)
     {
-        $db = JFactory::getDbo();
+        $db = Factory::getDbo();
 
         if ($this->_item === null) {
             $this->_item = false;
@@ -51,7 +51,7 @@ class VisitnordicModelCollection extends VNModelItem
                 return $this->_item;
             }
 
-            if (strtotime($table->publish_up) > strtotime(JFactory::getDate()) || ((strtotime($table->publish_down) < strtotime(JFactory::getDate())) && $table->publish_down != JFactory::getDbo()->getNullDate())) {
+            if (strtotime($table->publish_up) > strtotime(Factory::getDate()) || ((strtotime($table->publish_down) < strtotime(Factory::getDate())) && $table->publish_down != Factory::getDbo()->getNullDate())) {
                 return $this->_item;
             }
 

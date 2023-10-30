@@ -17,7 +17,7 @@ class VisitnordicViewLink extends JViewLegacy
 {
     public function display($tpl = null)
     {
-        $app = JFactory::getApplication();
+        $app = Factory::getApplication();
         $view = $app->input->get('data_type', '', 'string');
         $id = $app->input->get('data_id', '', 'int');
 

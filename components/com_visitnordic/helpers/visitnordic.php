@@ -21,7 +21,7 @@ class VNHelper
 
     public static function getCategoryNameByCategoryId($category_id)
     {
-        $db = JFactory::getDbo();
+        $db = Factory::getDbo();
         $query = $db->getQuery(true);
 
         $query
@@ -36,7 +36,7 @@ class VNHelper
     public static function getLanguageCode($tag = null)
     {
         if (!$tag) {
-            $tag = JFactory::getLanguage()->getTag();
+            $tag = Factory::getLanguage()->getTag();
         }
 
         $tag = strtolower($tag);
@@ -238,7 +238,7 @@ class VNHTMLHelper
         $cacheFilePath = self::$cacheImageFolder.$cacheFileName;
 
         if (file_exists(JPATH_ROOT.'/'.$cacheFilePath) && !$refresh) {
-            return JFactory::getApplication()->get('cdn') ? JFactory::getApplication()->get('cdn').$cacheFilePath : $cacheFilePath;
+            return Factory::getApplication()->get('cdn') ? Factory::getApplication()->get('cdn').$cacheFilePath : $cacheFilePath;
         }
 
         try {
@@ -264,7 +264,7 @@ class VNHTMLHelper
             echo $e->getMessage();
         }
 
-        return JFactory::getApplication()->get('cdn') ? JFactory::getApplication()->get('cdn').$cacheFilePath : $cacheFilePath;
+        return Factory::getApplication()->get('cdn') ? Factory::getApplication()->get('cdn').$cacheFilePath : $cacheFilePath;
     }
 
     public static function getUrlDomain($url, $maxlength = 50)
@@ -305,8 +305,8 @@ class VNViewHelper
 {
     public static function setMetaData($type, $view = null, $item, $params)
     {
-        $app = JFactory::getApplication();
-        $doc = JFactory::getDocument();
+        $app = Factory::getApplication();
+        $doc = Factory::getDocument();
 
         $meta_title = $item->meta_title;
         $meta_description = $item->meta_description;

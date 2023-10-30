@@ -19,8 +19,8 @@ class VisitnordicController extends JControllerLegacy
 
         JHtml::addIncludePath(JPATH_COMPONENT_ADMINISTRATOR . '/helpers/html');
 
-        $view = JFactory::getApplication()->input->getCmd('view', 'collections');
-        JFactory::getApplication()->input->set('view', $view);
+        $view = Factory::getApplication()->input->getCmd('view', 'collections');
+        Factory::getApplication()->input->set('view', $view);
 
         parent::display($cachable, $urlparams);
 

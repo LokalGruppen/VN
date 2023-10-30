@@ -106,7 +106,7 @@ $mapkey = 'Ag0oESqxvOpgWZmlM9Szsg6JXlDqLmUrxz078G3nSDgo9FlKmohJui8uPrW0c-zt';
 
 
     <?php
-    JFactory::getDocument()->addScriptDeclaration("
+    Factory::getDocument()->addScriptDeclaration("
             window.onload = function(){
                 bmap_render('" . $id . "', '" . $zoom . "', Microsoft.Maps.MapTypeId." . $type . ");
             };
@@ -293,14 +293,14 @@ $mapkey = 'Ag0oESqxvOpgWZmlM9Szsg6JXlDqLmUrxz078G3nSDgo9FlKmohJui8uPrW0c-zt';
                     });
             ';
 
-        JFactory::getDocument()->addScriptDeclaration($js);
+        Factory::getDocument()->addScriptDeclaration($js);
 
         // Add Bing Map
-        JFactory::getDocument()->addScript('https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0');
+        Factory::getDocument()->addScript('https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0');
 
         // Add PinClusterer (https://github.com/rtsinani/PinClusterer)
-        //JFactory::getDocument()->addScript('templates/visitnordic/js/pinclusterer.min.js');
-        //JFactory::getDocument()->addStyleSheet('templates/visitnordic/css/pinclusterer.css');
+        //Factory::getDocument()->addScript('templates/visitnordic/js/pinclusterer.min.js');
+        //Factory::getDocument()->addStyleSheet('templates/visitnordic/css/pinclusterer.css');
 
         define('MAP_BING_INIT', 1);
     }

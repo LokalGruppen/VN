@@ -42,7 +42,7 @@ class VisitnordicModelCollectionitems extends VNModelList
     public function getItems()
     {
         $items = parent::getItems();
-        $db = JFactory::getDbo();
+        $db = Factory::getDbo();
 
         foreach ($items as $key => $item) {
             if ($item->data_type == 'link') {
@@ -133,8 +133,8 @@ class VisitnordicModelCollectionitems extends VNModelList
 
     protected function populateState($ordering = 'ordering', $direction = 'ASC')
     {
-        $app = JFactory::getApplication();
-        $user = JFactory::getUser();
+        $app = Factory::getApplication();
+        $user = Factory::getUser();
 
         // Filter on state for those who do not have edit or edit.state rights
         if ((!$user->authorise('core.edit.state', 'com_visitnordic')) && (!$user->authorise('core.edit', 'com_visitnordic'))) {
@@ -143,7 +143,7 @@ class VisitnordicModelCollectionitems extends VNModelList
 
         // Filter on language if Multi language site
         if (JLanguageMultilang::isEnabled()) {
-            //$this->setState('filter.language', JFactory::getLanguage()->getTag());
+            //$this->setState('filter.language', Factory::getLanguage()->getTag());
         }
 
         //$this->setState('list.limit', 999);
@@ -205,7 +205,7 @@ class VisitnordicModelCollectionitems extends VNModelList
 
         // Filter by start and end dates.
         $nullDate = $db->quote($db->getNullDate());
-        $date = JFactory::getDate();
+        $date = Factory::getDate();
         $nowDate = $db->quote($date->toSql());
 
         $query->join('LEFT', '#__visitnordic_collections collection on (a.data_id = collection.id AND a.data_type = "collection")');

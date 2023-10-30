@@ -197,7 +197,7 @@ function initMap() {
 
     if (!defined('WINDOW_ONLOAD_STACK')) {
 
-        JFactory::getDocument()->addScriptDeclaration("
+        Factory::getDocument()->addScriptDeclaration("
 
             window.onload = function () {
 
@@ -209,7 +209,7 @@ function initMap() {
 
     } else {
 
-        JFactory::getDocument()->addScriptDeclaration("
+        Factory::getDocument()->addScriptDeclaration("
 
             var prev_handler = window.onload;
 
@@ -511,11 +511,11 @@ function initMap() {
 
 
 
-        JFactory::getDocument()->addScript('//maps.googleapis.com/maps/api/js??v=3&&amp;key=' . $mapkey, 'text/javascript', true, true);
+        Factory::getDocument()->addScript('//maps.googleapis.com/maps/api/js??v=3&&amp;key=' . $mapkey, 'text/javascript', true, true);
 
-        JFactory::getDocument()->addScript('https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js', 'text/javascript', true, true);
+        Factory::getDocument()->addScript('https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js', 'text/javascript', true, true);
 
-        JFactory::getDocument()->addScriptDeclaration($js);
+        Factory::getDocument()->addScriptDeclaration($js);
 
 
 

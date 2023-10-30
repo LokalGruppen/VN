@@ -22,8 +22,8 @@ class VisitnordicViewTour extends JViewLegacy
 
     public function display($tpl = null)
     {
-        $app = JFactory::getApplication();
-        $user = JFactory::getUser();
+        $app = Factory::getApplication();
+        $user = Factory::getUser();
 
         $this->state = $this->get('State');
         $this->item = $this->get('Data');
@@ -57,7 +57,7 @@ class VisitnordicViewTour extends JViewLegacy
 
     protected function _prepareDocument()
     {
-        $app = JFactory::getApplication();
+        $app = Factory::getApplication();
         $menus = $app->getMenu();
         $menu = $menus->getActive();
 

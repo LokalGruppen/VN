@@ -1,5 +1,5 @@
 
-<div class="carousel <?php echo JFactory::getApplication()->input->get('view') != "home" && count($displayData) > 1 ? 'mb-1' : 'mb-3'; ?>" style="position:relative;overflow:hidden;">
+<div class="carousel <?php echo Factory::getApplication()->input->get('view') != "home" && count($displayData) > 1 ? 'mb-1' : 'mb-3'; ?>" style="position:relative;overflow:hidden;">
         <div class="slick m-0">
             <?php $i = 0; ?>
             <?php foreach ($displayData as $slide): ?>
@@ -44,7 +44,7 @@
 </div>
 
 
-<?php if(JFactory::getApplication()->input->get('view') != "home" && count($displayData) > 1): ?>
+<?php if(Factory::getApplication()->input->get('view') != "home" && count($displayData) > 1): ?>
 <div class="slick-nav mb-3" style="overflow:hidden;">
     <?php foreach ($displayData as $slide): ?>
 

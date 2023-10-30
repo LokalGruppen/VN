@@ -98,11 +98,12 @@ if (!$logo_link) {
 			</div>
         </nav>
         <?php
-if(JRequest::getVar('view') == "home" ) {
-if ($helper->countModules('fullwidth-outside')) : ?>
-    <?php $helper->renderModules('fullwidth-outside', 'block'); ?>
-    <?php endif;
-}else{}?>
+        if (Factory::getApplication()->input->get('view') === "home") {
+            if ($helper->countModules('fullwidth-outside')) : ?>
+                <?php $helper->renderModules('fullwidth-outside', 'block'); ?>
+            <?php endif;
+        } else {}?>
+
            
         <div class="container-fluid">
             
