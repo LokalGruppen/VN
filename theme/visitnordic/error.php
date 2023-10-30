@@ -9,4 +9,4 @@ defined('_JEXEC') or die;
 
 include __DIR__ .'/includes/params.php';
 
-$helper = vnTemplateHelper::getInstance($this);
+$helper = \VisitNordic\vnTemplateHelper::getInstance($this);

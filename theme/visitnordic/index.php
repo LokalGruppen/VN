@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 
 include __DIR__ .'/includes/params.php';
-$helper = vnTemplateHelper::getInstance($this);
+$helper = \VisitNordic\vnTemplateHelper::getInstance($this);
 
 
 include __DIR__ .'/template.php';
