@@ -1,10 +1,9 @@
 <?php
-
 namespace VisitNordic;
 
-// Explicitly use the full namespace
-use \Joomla\CMS\Helper\ModuleHelper;
+use Joomla\CMS\Helper\ModuleHelper;
 
+defined('_JEXEC') or die;
 /**
  * @author CGOnline.dk
  * @copyright Copyright © 2016 CGOnline.dk - All rights reserved.

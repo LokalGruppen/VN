@@ -1,17 +1,13 @@
 <?php
-use \Joomla\CMS\Factory;
+namespace VisitNordic;
 
-/**
- * @author CGOnline.dk
- * @copyright Copyright © 2016 CGOnline.dk - All rights reserved.
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
- */
+use Joomla\CMS\Factory;
+
 defined('_JEXEC') or die;
 
-include_once __DIR__ .'/helper.php';
+$app = Factory::getApplication();
 
-// Init usefull ressources
-$app	    = Factory::getApplication();
+$app = Factory::getApplication();
 $doc	    = Factory::getDocument();
 $user       = Factory::getUser();
 $config     = Factory::getConfig();
