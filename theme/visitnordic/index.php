@@ -7,8 +7,10 @@
 defined('_JEXEC') or die;
 
 
-include __DIR__ .'/includes/params.php';
+use Joomla\CMS\Factory;
 
+include __DIR__ .'/includes/params.php';
 $helper = vnTemplateHelper::getInstance($this);
+
 
 include __DIR__ .'/template.php';

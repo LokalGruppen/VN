@@ -20,7 +20,8 @@ $params	= Factory::getApplication()->getTemplate(true)->params;
 // Build up direct path to template
 $tpath	= $this->baseurl . '/templates/' . $this->template;
 
-$doc->addScriptVersion($tpath . '/dist/bundle.js','912345');
+$webAssetManager = $doc->getWebAssetManager();
+$webAssetManager->registerAndUseScript('bundle-js', $tpath . '/dist/bundle.js', [], ['version' => '912345']);
 
 $doc->addStyleSheetVersion($tpath . '/dist/bundle.css','912345');
 
