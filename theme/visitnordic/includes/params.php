@@ -20,10 +20,10 @@ $params	= Factory::getApplication()->getTemplate(true)->params;
 // Build up direct path to template
 $tpath	= $this->baseurl . '/templates/' . $this->template;
 
+// Updated WebAssetManager for stylesheets
 $webAssetManager = $doc->getWebAssetManager();
 $webAssetManager->registerAndUseScript('bundle-js', $tpath . '/dist/bundle.js', [], ['version' => '912345']);
-
-$doc->addStyleSheetVersion($tpath . '/dist/bundle.css','912345');
+$webAssetManager->registerAndUseStylesheet('bundle-css', $tpath . '/dist/bundle.css', [], ['version' => '912345']);
 
 // Generator & Favicon tags
 $doc->setGenerator(null);
