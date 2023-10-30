@@ -1,4 +1,5 @@
 <?php
+use \Joomla\CMS\Factory;
 /**
  * @author CGOnline.dk
  * @copyright Copyright © 2016 CGOnline.dk - All rights reserved.

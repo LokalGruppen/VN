@@ -1,5 +1,5 @@
 <?php
-use Joomla\CMS\Factory;
+use \Joomla\CMS\Factory;
 
 /**
  * @author CGOnline.dk

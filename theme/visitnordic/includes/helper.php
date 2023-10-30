@@ -2,7 +2,8 @@
 
 namespace VisitNordic;
 
-use Joomla\CMS\Helper\ModuleHelper;
+// Explicitly use the full namespace
+use \Joomla\CMS\Helper\ModuleHelper;
 
 /**
  * @author CGOnline.dk
