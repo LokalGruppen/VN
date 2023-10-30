@@ -2,6 +2,8 @@
 
 namespace VisitNordic;
 
+use Joomla\CMS\Helper\ModuleHelper;
+
 /**
  * @author CGOnline.dk
  * @copyright Copyright © 2016 CGOnline.dk - All rights reserved.
@@ -60,16 +62,16 @@ class vnTemplateHelper
 
     public function countModules($position = '')
     {
-		if ($this->getPageType() == 'index')
-		{
-			return $this->document->countModules($position);
-		}
-		
-		if ($this->getPageType() == 'error')
-		{
-			return count(JModuleHelper::getModules($position));
-		}
-		
+        if ($this->getPageType() == 'index')
+        {
+            return $this->document->countModules($position);
+        }
+
+        if ($this->getPageType() == 'error')
+        {
+            return count(ModuleHelper::getModules($position));  // Updated for Joomla 4
+        }
+
         return 0;
     }
 
