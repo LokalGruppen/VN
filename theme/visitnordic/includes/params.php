@@ -22,7 +22,7 @@ $tpath	= $this->baseurl . '/templates/' . $this->template;
 
 $doc->addScriptOptions($tpath . '/dist/bundle.js','912345');
 
-$doc->addStyleSheetVersion($tpath . '/dist/bundle.css','912345');
+$doc->addStyleSheet($tpath . '/dist/bundle.css','912345');
 
 // Generator & Favicon tags
 $doc->setGenerator(null);
