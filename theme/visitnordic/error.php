@@ -1,10 +1,10 @@
 <?php
-namespace VisitNordic;
-
 use Joomla\CMS\Factory;
 
 defined('_JEXEC') or die;
 
-$helper = \VisitNordic\vnTemplateHelper::getInstance($this);
+require_once __DIR__ . '/helper.php';  // Explicitly include helper.php
+
+$helper = vnTemplateHelper::getInstance($this);  // Removed the namespace
 
 include __DIR__ .'/includes/params.php';

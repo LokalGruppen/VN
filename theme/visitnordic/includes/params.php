@@ -1,6 +1,4 @@
 <?php
-namespace VisitNordic;
-
 use Joomla\CMS\Factory;
 
 defined('_JEXEC') or die;
