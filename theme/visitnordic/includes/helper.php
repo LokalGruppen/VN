@@ -1,5 +1,7 @@
 <?php
+namespace VisitNordic;
 
+use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 
 defined('_JEXEC') or die;
